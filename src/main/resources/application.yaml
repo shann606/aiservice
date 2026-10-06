@@ -1,3 +1,17 @@
 spring:
   application:
-    name: aiservice
+    name: ai-service
+  ai:
+    openai:
+      chat:
+        base-url: http://localhost:10001/engines/v1
+        model: ai/llama3.2:latest
+        temperature: 0.2
+        max-tokens: 200
+      api-key: ${xxxx}
+server:
+  port: 9191
+logging:
+  pattern:
+    console: ${%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) - %msg%n}
+
