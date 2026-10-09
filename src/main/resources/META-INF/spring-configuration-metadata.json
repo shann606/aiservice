@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "custom.catalog.endpoint",
+      "type": "java.lang.String",
+      "description": "Catalog service endpoint."
+    },
+	{
+	      "name": "custom.expense.endpoint",
+	      "type": "java.lang.String",
+	      "description": "Catalog service endpoint."
+	    }
+  ]
+}

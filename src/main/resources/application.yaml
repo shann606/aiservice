@@ -10,8 +10,14 @@ spring:
         max-tokens: 200
       api-key: ${xxxx}
 server:
-  port: 9191
+  port: 9090
 logging:
   pattern:
-    console: ${%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) - %msg%n}
-
+    console: "%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) - %msg%n"
+  level:
+   '[org.springframework.ai.chat.client.advisor]': Debug
+custom:
+  catalog:
+    endpoint: http://localhost:8081
+  expense:
+    endpoint: http://localhost:8082
