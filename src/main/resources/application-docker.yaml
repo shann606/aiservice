@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: ai-service
+  ai:
+    openai:
+      chat:
+        base-url: http://localhost:10001/engines/v1
+        model: ai/llama3.2:latest
+        temperature: 0.2
+        max-tokens: 200
+      api-key: ${xxxx}
+server:
+  port: 9090
+logging:
+  pattern:
+    console: "%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) - %msg%n"
+  level:
+   '[org.springframework.ai.chat.client.advisor]': Debug
+custom:
+  catalog:
+    endpoint: http://host.docker.internal:8081
+  expense:
+    endpoint: http://host.docker.internal:8082
